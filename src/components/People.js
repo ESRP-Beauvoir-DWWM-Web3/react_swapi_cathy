@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-export default function swPeopleDisplay() {
-    const [People, setSwPeopleArray] = useState(null);
+export default function PeopleDisplay() {
+    const [People, setPeopleArray] = useState(null);
     const [error, setError] = useState(null);
     const [loaded, setLoaded] = useState(false);
     useEffect(() => {
@@ -9,7 +9,7 @@ export default function swPeopleDisplay() {
                 response.json()
                     .then(res => {
                         console.log(res);
-                        setSwPeopleArray(res);
+                        setPeopleArray(res);
                         setLoaded(true);
                     })
                     .catch(err => {
